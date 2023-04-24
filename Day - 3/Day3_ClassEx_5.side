@@ -1,0 +1,69 @@
+{
+  "id": "f5a60e73-8dab-49a8-94b6-03e30d6c6404",
+  "version": "2.0",
+  "name": "Class_EX_5",
+  "url": "https://demo.opencart.com/index.php?route=checkout/voucher&language=en-gb",
+  "tests": [{
+    "id": "838157a1-13b5-42cd-811f-c661b34b3749",
+    "name": "Class_Ex_5",
+    "commands": [{
+      "id": "f75fbf49-b846-44bf-8f27-f82722324175",
+      "comment": "",
+      "command": "open",
+      "target": "https://demo.opencart.com/index.php?route=checkout/voucher&language=en-gb",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e7c2ae36-f84d-41af-a047-e92ddba72fd8",
+      "comment": "",
+      "command": "runScript",
+      "target": "return window.scrollTo(0,500)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "66e43c51-4bad-4146-9c62-9317d90556f2",
+      "comment": "",
+      "command": "assertValue",
+      "target": "id=input-amount",
+      "targets": [
+        ["id=input-amount", "id"],
+        ["name=amount", "name"],
+        ["css=#input-amount", "css:finder"],
+        ["xpath=//input[@id='input-amount']", "xpath:attributes"],
+        ["xpath=//form[@id='form-voucher']/div[7]/div/input", "xpath:idRelative"],
+        ["xpath=//div[7]/div/input", "xpath:position"]
+      ],
+      "value": "1"
+    }, {
+      "id": "db667b52-d557-4dd9-a89b-1f5bb44ae29c",
+      "comment": "",
+      "command": "click",
+      "target": "name=agree",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b2b10077-a7e5-4e5f-8ec1-1e527fceb87b",
+      "comment": "",
+      "command": "verifyChecked",
+      "target": "name=agree",
+      "targets": [
+        ["name=agree", "name"],
+        ["css=.form-check-input:nth-child(2)", "css:finder"],
+        ["xpath=//input[@name='agree']", "xpath:attributes"],
+        ["xpath=//form[@id='form-voucher']/div[8]/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[8]/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "a30303e6-4531-4bfd-9c5f-0e3ce4ec3674",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["838157a1-13b5-42cd-811f-c661b34b3749"]
+  }],
+  "urls": ["https://demo.opencart.com/index.php?route=checkout/voucher&language=en-gb"],
+  "plugins": []
+}
